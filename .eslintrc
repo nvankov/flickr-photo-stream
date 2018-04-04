@@ -1,0 +1,24 @@
+{
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true,
+			"modules": true
+		},
+		"rules": {
+			"curly": "error",
+			"comma-dangle": [
+				"error",
+				"never"
+			],
+			"no-cond-assign": "except-parens",
+			"no-constant-condition": "error",
+			"no-debugger": "error",
+			"no-dupe-args": "error",
+			"no-dupe-keys": "error",
+			"no-duplicate-case": "error",
+			"no-empty": "error",
+			"no-alert": "error"
+		}
+	}
+}

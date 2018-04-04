@@ -1,0 +1,55 @@
+.PhotoTile {
+	display: inline-block;
+	margin: 2rem;
+	min-width: 10rem;
+    box-shadow: 0 0 1rem 0.125rem #c3c3c3;
+    border-radius: 0.25rem;
+	padding: 1rem;
+	width: 20rem;
+	justify-content: center;
+}
+
+.PhotoTile .Photo {
+	margin-bottom: 1rem;
+	max-width: 90%;
+	max-height: 20rem;
+}
+
+.PhotoTitle {
+	word-wrap: break-word;
+	word-break: break-all;
+	display: inline-block;
+}
+
+.TagsHeader {
+	margin-top: 1rem;
+    text-align: start;
+}
+
+.PhotoTile .PhotoTag {
+	margin-right: 0.5rem;
+    background: #d8d8d8;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.25rem;
+	font-size: 0.85rem;
+	word-break: break-word;
+}
+
+.PhotoTile .PhotoTagsContainer {
+	display: flex;
+	flex-wrap: wrap;
+	max-height: 10rem;
+    overflow: auto;
+}
+
+.PhotoTile section {
+	margin-top: 1rem;
+	text-align: start;
+	word-wrap: break-word;
+}
+
+.PhotoTile .PhotoDescription {
+	max-height: 10rem;
+    overflow: auto;
+}
