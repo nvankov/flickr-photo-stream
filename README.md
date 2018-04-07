@@ -1,5 +1,7 @@
 # Flickr Photo Stream
 
+A simple app to display the most recent public Flickr photos
+
 ## Run it locally
 
 To run the app locally:
@@ -8,3 +10,5 @@ To run the app locally:
 3. Start the application: ```npm start```
 4. Run tests: ```npm test```
 5. Builds the app for production to the `build` folder: ```npm build```
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
