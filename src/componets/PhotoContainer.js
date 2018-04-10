@@ -1,26 +1,8 @@
 import React, { Component } from 'react';
 import PhotoTile from './PhotoTile';
-import FlickrPhotosAPI from '../api/FlickrPhotosAPI';
 import './PhotoContainer.css';
 
 class PhotoContainer extends Component {
-	constructor() {
-		super();
-		this.state = { flickrPhotos: [] };
-	}
-
-	componentWillMount() {
-		FlickrPhotosAPI.getPhotos()
-			.then((response) => {
-				this.setState({
-					flickrPhotos: response.items
-				});
-			})
-			.catch((error) => {
-				console.log(error);
-			});
-	}
-
 	extractPhotoData(item) {
 		let src = item.media.m;
 		let title = item.title.replace(/\s/g, '');
@@ -67,7 +49,7 @@ class PhotoContainer extends Component {
 		let description = '';
 
 		let result = photo.description.match(/<p>(.*?)<\/p>/g).map((val) => {
-			return val.replace(/<\/?p>/g,'');
+			return val.replace(/<\/?p>/g, '');
 		});
 
 		if (result[2]) {
@@ -99,7 +81,7 @@ class PhotoContainer extends Component {
 	}
 
 	render() {
-		let photoTiles = this.state.flickrPhotos.map((photo) => {
+		let photoTiles = this.props.flickrPhotos.map((photo) => {
 			return (<PhotoTile key={photo.link} photo={this.extractPhotoData(photo)} />);
 		});
 
