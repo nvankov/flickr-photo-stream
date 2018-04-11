@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PhotoContainer from './componets/PhotoContainer';
 import FlickrPhotosAPI from './api/FlickrPhotosAPI';
+import NotificationMessage from './utils/NotificationMessage';
 import './App.css';
 
 class App extends Component {
@@ -39,7 +40,7 @@ class App extends Component {
 				});
 			})
 			.catch((error) => {
-				console.log(error);
+				NotificationMessage.showError('Could not fetch data. Please refresh the page');
 			});
 	}
 

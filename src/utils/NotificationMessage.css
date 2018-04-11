@@ -1,0 +1,54 @@
+#NotificationArea {
+	position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.NotificationMessage {
+	min-height: 2.5rem;
+    width: 13rem;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+	opacity: 0;
+	color: #fff;
+	font-size: 0.85rem;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.NotificationSuccess {
+	background: #299929;
+	box-shadow: 0 0 0.5rem 0.125rem #299929;
+}
+
+.NotificationWarning {
+	background: #929929;
+	box-shadow: 0 0 0.5rem 0.125rem #929929;
+}
+
+.NotificationError {
+	background: #992929;
+	box-shadow: 0 0 0.5rem 0.125rem #992929;
+}
+
+.NotificationMessage.NotificationShow {
+	animation: fadeIn 1s;
+    opacity: 1;
+}
+
+.NotificationMessage.NotificationHide {
+	animation: fadeOut 1s;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+
+@keyframes fadeOut {
+    from {opacity: 1}
+    to {opacity: 0}
+}
